@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="636.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project12.Frontend.AppControler">
+   <children>
+      <VBox fx:id="mapBox" layoutX="220.0" layoutY="18.0" prefHeight="606.0" prefWidth="575.0" />
+      <Pane fx:id="controlPane" prefHeight="635.0" prefWidth="204.0" style="-fx-background-color: lightgray;">
+         <children>
+            <Label alignment="CENTER" layoutX="45.0" layoutY="14.0" prefHeight="15.0" prefWidth="114.0" style="-fx-background-color: gray; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-weight: bold;" text="Settings">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="startPostCode" layoutX="28.0" layoutY="465.0" promptText="Starting Post Code" />
+            <TextField fx:id="destinationPostCode" layoutX="28.0" layoutY="498.0" promptText="Destination Post Code" />
+            <Button layoutX="53.0" layoutY="537.0" mnemonicParsing="false" onAction="#searchButtonHandling" prefHeight="26.0" prefWidth="96.0" text="Search" />
+            <ComboBox fx:id="vehicleChooser" layoutX="27.0" layoutY="85.0" prefWidth="150.0" promptText="Choose Vehicle" />
+            <Button layoutX="72.0" layoutY="581.0" mnemonicParsing="false" onAction="#clearButtonHandling" prefHeight="9.0" prefWidth="55.0" text="Clear" />
+            <Label layoutX="12.0" layoutY="156.0" prefHeight="26.0" prefWidth="41.0" text="Bus nr.:" />
+            <TextField fx:id="busNumber" layoutX="132.0" layoutY="156.0" prefHeight="25.0" prefWidth="62.0" promptText="Nr." />
+            <Label layoutX="11.0" layoutY="217.0" prefHeight="26.0" prefWidth="81.0" text="Exit at stop nr:" />
+            <TextField fx:id="exitStop" layoutX="132.0" layoutY="216.0" prefHeight="25.0" prefWidth="62.0" promptText="Stop" />
+            <CheckBox fx:id="showAllRoutes" layoutX="38.0" layoutY="253.0" mnemonicParsing="false" onAction="#showRoutesHandling" prefHeight="17.0" prefWidth="114.0" text="Show All Routes" />
+            <Label layoutX="11.0" layoutY="190.0" text="Bus Departure Time:" />
+            <TextField fx:id="busDeparture" layoutX="132.0" layoutY="186.0" prefHeight="25.0" prefWidth="62.0" promptText="hr:mn:sc" />
+            <CheckBox fx:id="toggleCheckBox" layoutX="35.0" layoutY="380.0" text="Accesibility Score" />
+            <Slider fx:id="maxWalkingDistance" layoutX="14.0" layoutY="319.0" prefHeight="14.0" prefWidth="175.0"
+                    min="0.2" max="1.0" value="0.4"
+                    majorTickUnit="0.2" minorTickCount="0" snapToTicks="true"
+                    showTickMarks="true" showTickLabels="true" />
+            <Label layoutX="48.0" layoutY="302.0" text="Distance To Stations" />
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="239.0" layoutY="23.0" opacity="0.85" prefHeight="116.0" prefWidth="204.0" style="-fx-background-color: gray; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-weight: bold;">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="30.0" prefHeight="26.0" prefWidth="62.0" text="DISTANCE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="75.0" prefHeight="26.0" prefWidth="55.0" text="Bus:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="49.0" prefHeight="26.0" prefWidth="96.0" text="Walk to Station:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="104.0" prefHeight="26.0" prefWidth="114.0" text="Walk from Station:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="distanceWalk1" layoutX="370.0" layoutY="50.0" prefHeight="26.0" prefWidth="62.0" promptText="km" />
+      <TextField fx:id="distanceBus" layoutX="370.0" layoutY="76.0" prefHeight="26.0" prefWidth="62.0" promptText="km" />
+      <TextField fx:id="distanceWalk2" layoutX="370.0" layoutY="104.0" prefHeight="26.0" prefWidth="62.0" promptText="km" />
+      <Label alignment="CENTER" layoutX="569.0" layoutY="23.0" opacity="0.85" prefHeight="116.0" prefWidth="204.0" style="-fx-background-color: gray; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-weight: bold;">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="577.0" layoutY="30.0" prefHeight="26.0" prefWidth="62.0" text="TIME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="575.0" layoutY="75.0" prefHeight="26.0" prefWidth="55.0" text="Bus:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="575.0" layoutY="49.0" prefHeight="26.0" prefWidth="96.0" text="Walk to Station:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="575.0" layoutY="104.0" prefHeight="26.0" prefWidth="114.0" text="Walk from Station:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="timeWalk1" layoutX="700.0" layoutY="50.0" prefHeight="26.0" prefWidth="62.0" promptText="hr:mn:sc" />
+      <TextField fx:id="timeBus" layoutX="700.0" layoutY="76.0" prefHeight="26.0" prefWidth="62.0" promptText="hr:mn:sc" />
+      <TextField fx:id="timeWalk2" layoutX="700.0" layoutY="104.0" prefHeight="26.0" prefWidth="62.0" promptText="hr:mn:sc" />
+      <Pane fx:id="infoPane" layoutX="498.0" layoutY="18.0" prefHeight="606.0" prefWidth="297.0" style="-fx-background-color: lightblue;">
+         <children>
+            <TextField fx:id="accesibilityInput" layoutX="10.0" layoutY="22.0" prefWidth="80.0" promptText="Input" />
+            <Button fx:id="infoSearch" layoutX="114.0" layoutY="22.0" onAction="#onAccesibilitySearch" text="Search" />
+            <Label fx:id="accesibilityPostCode" layoutX="14.0" layoutY="73.0" prefHeight="26.0" prefWidth="80.0" text="PostCode">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="tourismLabel" layoutX="14.0" layoutY="140.0" prefHeight="110.0" prefWidth="269.0" text="Label" />
+            <Label layoutX="14.0" layoutY="107.0" prefHeight="26.0" prefWidth="114.0" text="Tourism Score">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="250.0" prefHeight="25.0" prefWidth="114.0" text="General Score">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="generalScoreLabel" layoutX="14.0" layoutY="286.0" prefHeight="309.0" prefWidth="269.0" text="Label" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
