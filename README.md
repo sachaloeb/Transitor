@@ -1,5 +1,5 @@
 # Transitor: Public Transport Routing Engine for Maastricht 🚍
-This repository contains the implementation of Transitor, a Java-based project aimed at analyzing and enhancing socio-economic accessibility across Maastricht using public transport data. Developed as part of Project 1.2 for the Department of Advanced Computing Sciences at Maastricht University, this project combines routing algorithms, geographic data, and socio-economic metrics.
+This repository contains the implementation of Transitor, a Java-based project aimed at analyzing and enhancing socio-economic accessibility across Maastricht using public transport data. Developed as part of a project for the Department of Advanced Computing Sciences at Maastricht University, this project combines routing algorithms, geographic data, and socio-economic metrics.
 
 ## 📖 Overview
 Transitor seeks to address accessibility challenges in urban environments by developing a tool to calculate and visualize public transport routes and assess socio-economic accessibility. The project is divided into three phases:
