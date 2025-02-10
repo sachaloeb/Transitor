@@ -27,8 +27,8 @@ Transitor seeks to address accessibility challenges in urban environments by dev
 ### Steps
 1. Clone the repository:
    ```bash
-     git clone https://github.com/username/transitor.git
-     cd transitor
+     git clone https://github.com/sachaloeb/Transitor
+     cd Transitor
    ```
 2. Set up the database:
    - Import the GTFS dataset into MySQL.
@@ -39,4 +39,4 @@ Transitor seeks to address accessibility challenges in urban environments by dev
 - Visualization: Visualize routes and accessibility metrics on an interactive map.
 
 ## 🤝 Contributors
-This project was collaboratively developed by students of the Computer Science Year 1 program at Maastricht University. Special thanks to the Department of Advanced Computing Sciences for their guidance.
+This project was collaboratively developed by a team of 7 students of the Computer Science Year 1 program at Maastricht University. Special thanks to the Department of Advanced Computing Sciences for their guidance.
