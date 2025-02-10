@@ -27,7 +27,7 @@ Transitor seeks to address accessibility challenges in urban environments by dev
 ### Steps
 1. Clone the repository:
    ```bash
-     git clone https://github.com/sachaloeb/Transitor
+     git clone https://github.com/sachaloeb/Transitor.git
      cd Transitor
    ```
 2. Set up the database:
